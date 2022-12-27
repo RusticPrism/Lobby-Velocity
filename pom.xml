@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.rusticprism</groupId>
-    <artifactId>vlobby</artifactId>
+    <artifactId>lobbyvelocity</artifactId>
     <version>1.0.0-Beta</version>
     <packaging>jar</packaging>
 
-    <name>Vlobby</name>
+    <name>Lobby-Velocity</name>
 
     <description>A Simple Velocity Lobby Plugin</description>
     <properties>
@@ -129,7 +129,7 @@
                     <tagNameFormat>@{project.version}</tagNameFormat>
                     <scmCommentPrefix xml:space="preserve">[RELEASE] </scmCommentPrefix>
                     <goals>install deploy site-deploy
-                    </goals> <!-- install is here to fix javadoc generation in multi-module projects -->
+                    </goals> <!-- install is here to fix javadoc generation in multimodule projects -->
                     <releaseProfiles>release</releaseProfiles>
                 </configuration>
             </plugin>

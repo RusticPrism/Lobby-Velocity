@@ -1,4 +1,4 @@
-package de.rusticprism.vlobby;
+package de.rusticprism.lobbyvelocity;
 
 import com.velocitypowered.api.command.RawCommand;
 import com.velocitypowered.api.proxy.Player;
@@ -12,11 +12,11 @@ public class HubCommand implements RawCommand {
     public void execute(Invocation invocation) {
         if(invocation.source() instanceof Player player) {
             if(player.hasPermission("vlobby.command.lobby")) {
-                Optional<RegisteredServer> server = Vlobby.plugin.proxy.getServer("lobby");
+                Optional<RegisteredServer> server = LobbyVelocity.plugin.proxy.getServer("lobby");
                 if(server.isPresent()) {
                     player.createConnectionRequest(server.get()).fireAndForget();
-                }else player.sendMessage(Component.text(Vlobby.plugin.prefix + "§cLobby server not present!"));
+                }else player.sendMessage(Component.text(LobbyVelocity.plugin.prefix + "§cLobby server not present!"));
             }
-        }else invocation.source().sendMessage(Component.text(Vlobby.plugin.prefix + "§cYou have to be a §4Player §cto perform that Command!"));
+        }else invocation.source().sendMessage(Component.text(LobbyVelocity.plugin.prefix + "§cYou have to be a §4Player §cto perform that Command!"));
     }
 }
